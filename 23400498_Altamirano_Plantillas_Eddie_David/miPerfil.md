@@ -1,5 +1,5 @@
 <img src="https://avatars.githubusercontent.com/u/265372132?v=4" width="150"/>
-# Hola, soy Eddie Altamirano 👋
+# Hola, soy Eddie David Altamirano Plantillas 👋
 
 ## INFORMACIÓN GENERAL
 
@@ -11,7 +11,7 @@
 - Inteligencia Artificial
 - Desarrollo Frontend
 - Desarrollo Backend
-- Desarrollo Movil
+- Administración de Base de Datos
 
 ## Tecnologías
 
@@ -30,4 +30,5 @@
 
 ## Recomendación:
 Serie: Suits
+
 Pelicula: Project Hail Mary
