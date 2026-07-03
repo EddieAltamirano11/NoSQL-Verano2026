@@ -34,7 +34,7 @@
   db.prestamos.find().sort({diasPrestamo:-1})
 18. Mostrar únicamente el título y el año de los libros publicados a partir de 2022, ordenados del más reciente al más
 antiguo.
-  db.prestamos.find().sort({diasPrestamo:-1})
+ db.libros.find({año:{$gte:2000}},{titulo:1, año:1, _id:0}).sort({año:-1})
 19. Mostrar el nombre y la carrera de los usuarios cuya carrera sea Ingeniería en Sistemas Computacionales o
 Ingeniería Informática.
   db.usuarios.find({$or:[{carrera: "Ingeniería en Sistemas Computacionales"},{carrera:"Ingeniería Informática"}]},{nombre:1, carrera:1, _id:0})
