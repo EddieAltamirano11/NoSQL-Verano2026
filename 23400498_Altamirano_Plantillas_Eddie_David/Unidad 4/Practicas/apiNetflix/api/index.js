@@ -31,8 +31,6 @@ const peliculaSchema = new mongoose.Schema(
         timestamps:true
     }
 );
-const Pelicula = mongoose.model("Pelicula", serieSchema,"peliculas");
-
 const serieSchema = new mongoose.Schema(
     {
         titulo: {type: String, required: true, trim: true},
@@ -48,7 +46,10 @@ const serieSchema = new mongoose.Schema(
         timestamps:true
     }
 );
-const Serie = mongoose.model("Serie", peliculaSchema,"series");
+
+const Pelicula = mongoose.model("Pelicula", peliculaSchema,"peliculas");
+
+const Serie = mongoose.model("Serie", serieSchema,"series");
 
 app.get("/peliculas", async (req,res) =>{
     try{
@@ -252,9 +253,10 @@ app.delete("/series/:id", async (req,res) => {
         res.status(500).json({mensaje:"Error al eliminar Serie", error:error});
     }
 });
-
+module.exports = app;
+/*
 app.listen(PORT, () => {
     console.log("Servidor iniciado en http://localhost:"+PORT);
 });
-
+*/
 
