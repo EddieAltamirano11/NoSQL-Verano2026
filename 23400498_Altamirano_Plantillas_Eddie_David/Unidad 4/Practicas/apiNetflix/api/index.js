@@ -4,9 +4,11 @@ dns.setServers(['8.8.8.8', '1.1.1.1']); // Google + Cloudflare
 const express = require('express');
 const morgan = require('morgan');
 const mongoose = require('mongoose');
+const cors = require('cors');
 
 
 const app = express();
+app.use(cors());
 app.use(express.json()); // Para poder recibir datos de tipo JSON
 app.use(morgan("dev"));
 const PORT = 3001
