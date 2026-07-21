@@ -1,5 +1,5 @@
-const dns = require('dns');
-dns.setServers(['8.8.8.8', '1.1.1.1']); // Google + Cloudflare
+//const dns = require('dns');
+//dns.setServers(['8.8.8.8', '1.1.1.1']); // Google + Cloudflare
 
 const express = require('express');
 const morgan = require('morgan');
