@@ -31,7 +31,7 @@ mongoose.connect("mongodb://127.0.0.1:27017/escuela").then(()=>{
 const alumnoSchema = new mongoose.Schema(
     {
         nombre: {type: String, required: true, trim: true},
-        carrera: {type: String, required: true, trim: true},
+        carrera: {type: mongoose.Schema.Types.ObjectId, ref: "Carrera"}, // Referencia a la colección de carreras
         semestre: {type: Number, required: true, min: 1},
     },
     {
@@ -47,7 +47,7 @@ app.get("/",(req, res) => {
 
 app.get("/alumnos", async (req,res) =>{
     try{
-        const alumnos = await Alumno.find();
+        const alumnos = await Alumno.find().populate();;
         res.json(alumnos);
     }catch (error){
         res.status(500).json({
